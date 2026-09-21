@@ -12,7 +12,7 @@ import {
   ROW_COUNT,
   SYMBOL_LABELS,
 } from "../game/config";
-import { GameSession } from "../game/session";
+import { createSeededRng } from "../game/rng";\nimport { GameSession } from "../game/session";\nimport { generateGrid } from "../game/slot";
 import type { SpinOutcome, SymbolId } from "../game/types";
 
 const DESIGN_WIDTH = 1280;
@@ -132,11 +132,7 @@ export class GameView {
     this.stage.addChild(this.spinButton);
 
     this.renderState();
-    this.renderGrid(this.session.spin().grid, false);
-
-    // Refund the initial visual-only spin by starting a fresh session state.
-    this.session = new GameSession();
-    this.renderState();
+    this.renderGrid(generateGrid(createSeededRng(1337)), false);
 
     this.app.renderer.on("resize", () => this.resize());
     this.resize();
