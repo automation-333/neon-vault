@@ -1,0 +1,34 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #ecf8ff;
+  background: #030712;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(0, 238, 255, 0.08), transparent 40%),
+    #030712;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
