@@ -12,7 +12,9 @@ import {
   ROW_COUNT,
   SYMBOL_LABELS,
 } from "../game/config";
-import { createSeededRng } from "../game/rng";\nimport { GameSession } from "../game/session";\nimport { generateGrid } from "../game/slot";
+import { createSeededRng } from "../game/rng";
+import { GameSession } from "../game/session";
+import { generateGrid } from "../game/slot";
 import type { SpinOutcome, SymbolId } from "../game/types";
 
 const DESIGN_WIDTH = 1280;
